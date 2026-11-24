@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Додати витрату | Kvit</title>
+    </head>
+    <body>
+        <a href="#content">Перейти до основного вмісту</a>
+
+        <header>
+            <p><a href="index.html">Kvit</a> - облік спільних витрат</p>
+            <nav aria-label="Основна навігація">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про сервіс</a></li>
+                    <li><a href="groups.html">Мої групи</a></li>
+                    <li><a href="add-expense.html" aria-current="page">Додати витрату</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="content" tabindex="-1">
+            <h1>Додати витрату</h1>
+            <p>Група: «Подорож у Карпати».</p>
+            <p id="form-help">
+                Це навчальна HTML-форма. Усі поля обов’язкові.
+                Після перевірки заповнення сторінка відкриється повторно.
+                Дані не зберігаються та не додаються до списку витрат.
+            </p>
+
+            <form action="add-expense.html" method="get" aria-describedby="form-help">
+                <p>
+                    <label for="description">Опис витрати:</label>
+                    <input type="text" id="description" name="description" required>
+                </p>
+                <p>
+                    <label for="amount">Сума у гривнях:</label>
+                    <input type="number" id="amount" name="amount" min="0.01" step="0.01" required>
+                </p>
+                <p>
+                    <label for="date">Дата витрати:</label>
+                    <input type="date" id="date" name="date" required>
+                </p>
+                <p>
+                    <label for="category">Категорія:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Оберіть категорію</option>
+                        <option value="food">Їжа</option>
+                        <option value="housing">Житло</option>
+                        <option value="transport">Транспорт</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="payer">Хто сплатив:</label>
+                    <select id="payer" name="payer" required>
+                        <option value="">Оберіть учасницю</option>
+                        <option value="anastasiia">Анастасія</option>
+                        <option value="oleksandra">Олександра</option>
+                        <option value="karyna">Карина</option>
+                    </select>
+                </p>
+                <button type="submit">Перевірити заповнення</button>
+            </form>
+            <p><a href="groups.html">Повернутися до групи</a></p>
+        </main>
+
+        <footer>
+            <p>Kvit. Лабораторна робота №2. Група КІ-43. 2026 рік.</p>
+        </footer>
+    </body>
+</html>
